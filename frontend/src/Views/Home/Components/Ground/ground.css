@@ -1,0 +1,26 @@
+.ground {
+  position: relative;
+}
+.line {
+  width: 7px;
+  height: 480px;
+  border-radius: 50px;
+  position: absolute;
+}
+#line1 {
+  top: 0px;
+}
+#line2 {
+  top: 0px;
+  left: 153px;
+}
+#line3 {
+    top: -77px;
+    left: 77px;
+    transform: rotate(-90deg);
+}
+#line4 {
+    top: 76px;
+    left: 77px;
+    transform: rotate(-90deg);
+}

@@ -1,0 +1,30 @@
+.landing {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn {
+  box-sizing: border-box;
+  width: 910px;
+  height: 200px;
+  background: #1d3557;
+  border: 1px solid #457b9d;
+  border-radius: 13px;
+  cursor: pointer;
+  transition: ease 0.4s;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 97px;
+  color: #ffffff;
+  margin: 2%;
+}
+
+.btn:hover {
+  box-shadow: 0px 4px 4px 2px rgba(69, 123, 157, 0.25);
+  backdrop-filter: blur(2px);
+}
