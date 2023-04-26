@@ -1,56 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import "./landing.css";
+import BgAnimation from "./Components/BgAnimation/BgAnimation";
+import FormModal from "./Components/FormModal/FormModal";
 
 const Landing = () => {
+  const [modal, setModal] = useState(false);
+  const [login, setLogin] = useState(true);
+
+  const handleClose = () => setModal(false);
+  const handleSignupModal = () => {
+    setModal((prev) => !prev);
+    setLogin(false);
+  };
+  const handleLoginModal = () => {
+    setModal((prev) => !prev);
+    setLogin(true);
+  };
   return (
-    <div class="container">
-      <div class="bubbles">
-        <span style={{ "--i": 11 }}></span>
-        <span style={{ "--i": 12 }}></span>
-        <span style={{ "--i": 24 }}></span>
-        <span style={{ "--i": 10 }}></span>
-        <span style={{ "--i": 14 }}></span>
-        <span style={{ "--i": 23 }}></span>
-        <span style={{ "--i": 18 }}></span>
-        <span style={{ "--i": 16 }}></span>
-        <span style={{ "--i": 19 }}></span>
-        <span style={{ "--i": 20 }}></span>
-        <span style={{ "--i": 22 }}></span>
-        <span style={{ "--i": 25 }}></span>
-        <span style={{ "--i": 18 }}></span>
-        <span style={{ "--i": 21 }}></span>
-        <span style={{ "--i": 15 }}></span>
-        <span style={{ "--i": 13 }}></span>
-        <span style={{ "--i": 26 }}></span>
-        <span style={{ "--i": 17 }}></span>
-        <span style={{ "--i": 13 }}></span>
-        <span style={{ "--i": 28 }}></span>
-        <span style={{ "--i": 11 }}></span>
-        <span style={{ "--i": 12 }}></span>
-        <span style={{ "--i": 24 }}></span>
-        <span style={{ "--i": 10 }}></span>
-        <span style={{ "--i": 14 }}></span>
-        <span style={{ "--i": 23 }}></span>
-        <span style={{ "--i": 18 }}></span>
-        <span style={{ "--i": 16 }}></span>
-        <span style={{ "--i": 19 }}></span>
-        <span style={{ "--i": 20 }}></span>
-        <span style={{ "--i": 22 }}></span>
-        <span style={{ "--i": 25 }}></span>
-        <span style={{ "--i": 18 }}></span>
-        <span style={{ "--i": 21 }}></span>
-        <span style={{ "--i": 15 }}></span>
-        <span style={{ "--i": 13 }}></span>
-        <span style={{ "--i": 26 }}></span>
-        <span style={{ "--i": 17 }}></span>
-        <span style={{ "--i": 13 }}></span>
-        <span style={{ "--i": 28 }}></span>
-      </div>
+    <BgAnimation>
       <div className="landing">
-        <button className="btn login">Login</button>
-        <button className="btn signup">Signup</button>
+        <button className="btn login" onClick={handleLoginModal}>
+          Login
+        </button>
+        <button className="btn signup" onClick={handleSignupModal}>
+          Signup
+        </button>
       </div>
-    </div>
+      {modal && <FormModal login={login} handleClose={handleClose} />}
+    </BgAnimation>
   );
 };
 
