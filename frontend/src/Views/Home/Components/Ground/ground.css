@@ -15,12 +15,134 @@
   left: 153px;
 }
 #line3 {
-    top: -77px;
-    left: 77px;
-    transform: rotate(-90deg);
+  top: -77px;
+  left: 77px;
+  transform: rotate(-90deg);
 }
 #line4 {
-    top: 76px;
-    left: 77px;
-    transform: rotate(-90deg);
+  top: 76px;
+  left: 77px;
+  transform: rotate(-90deg);
+}
+
+.tl {
+  position: absolute;
+  width: 155px;
+  height: 160px;
+  top: 0;
+  left: -155px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tc {
+  position: absolute;
+  width: 146px;
+  height: 160px;
+  top: 0;
+  left: 7px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tr {
+  position: absolute;
+  width: 155px;
+  height: 160px;
+  top: 0;
+  left: 160px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cl {
+  position: absolute;
+  width: 155px;
+  height: 147px;
+  top: 165px;
+  left: -155px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cc {
+  position: absolute;
+  width: 146px;
+  height: 147px;
+  top: 165px;
+  left: 7px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cr {
+  position: absolute;
+  width: 155px;
+  height: 147px;
+  top: 165px;
+  left: 160px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bl {
+  position: absolute;
+  width: 155px;
+  height: 155px;
+  top: 320px;
+  left: -155px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bc {
+  position: absolute;
+  width: 147px;
+  height: 155px;
+  top: 320px;
+  left: 7px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.br {
+  position: absolute;
+  width: 155px;
+  height: 155px;
+  top: 320px;
+  left: 160px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playerIcon {
+  width: 100px;
+  animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
